@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html_content = """<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -35,6 +35,272 @@ h1 {
 
 .subtitle {
   text-align: center;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+h2 {
+  margin-top: 30px;
+  font-family: 'Playfair Display', serif;
+  color: #ffd9b3;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.code {
+  background: rgba(0,0,0,0.35);
+  padding: 8px 12px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 5px;
+  font-family: monospace;
+}
+
+.box {
+  background: rgba(255,255,255,0.06);
+  padding: 15px;
+  border-radius: 14px;
+  margin-top: 10px;
+}
+
+.highlight {
+  color: #ffd9b3;
+  font-weight: 600;
+}
+
+.category {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin: 4px;
+  font-size: 13px;
+}
+
+/* Categorías existentes */
+.visual { background:#f3d2a2; color:#5c3d2e; }
+.logica { background:#cbb7ff; color:#3a2a54; }
+.misterio { background:#c89ab0; color:#3a1f2c; }
+.emoji { background:#ffc48a; color:#5c3d2e; }
+.social { background:#a9d6c2; color:#1f4d3c; }
+.texto { background:#e8d8c3; color:#5c3d2e; }
+.temario { background:#b79cff; color:#2c1f4d; }
+.galicia { background:#b7e4c7; color:#1b4332; }
+.cultura { background:#f0e0c9; color:#5c3d2e; }
+
+/* NUEVAS CATEGORÍAS TRIVIAL (Basadas en el código C#) */
+.trivial-geografia { background:#4f9ee8; color:#fff; }
+.trivial-arte { background:#9b63d9; color:#fff; }
+.trivial-historia { background:#f3d34a; color:#5c3d2e; }
+.trivial-entretenimiento { background:#e05555; color:#fff; }
+.trivial-ciencias { background:#63b86b; color:#fff; }
+.trivial-deportes { background:#f29a3f; color:#fff; }
+.trivial-otras { background:#f1dbc7; color:#5c3d2e; }
+
+
+.canje {
+  background: rgba(255, 217, 179, 0.05);
+  border-left: 4px solid #ffd9b3;
+  padding: 15px;
+  border-radius: 0 12px 12px 0;
+  margin: 14px 0;
+}
+
+.precio {
+  color: #ffd9b3;
+  font-weight: bold;
+}
+
+.links {
+  background: rgba(120,160,255,0.08);
+  border: 2px solid rgba(120,160,255,0.4);
+  border-radius: 14px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.links p {
+  margin-bottom: 14px;
+  margin-top: 0;
+}
+
+.links a {
+  color: #9ec5ff;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎮 Minijuego del chat</h1>
+<div class="subtitle">Participa en los descansos, compite con tus compañeros y desbloquea medallas exclusivas ✨</div>
+
+<h2>🧠 Cómo jugar</h2>
+<p>Cuando aparezca un acertijo o trivia interactiva en la pantalla durante las pausas de estudio, envía tu respuesta en el chat usando el comando:</p>
+
+<div class="code">!responder tu_respuesta</div>
+
+<p>Ejemplo:</p>
+<div class="code">!responder orballo</div>
+
+---
+
+<h2>🎯 Categorías</h2>
+
+<div class="box">
+<span class="category visual">visual</span>
+<span class="category texto">texto</span>
+<span class="category logica">lógica</span>
+<span class="category misterio">misterio</span>
+<span class="category emoji">emoji</span>
+<span class="category social">social</span>
+<span class="category temario">temario</span>
+<span class="category cultura">libro/cine/música</span>
+<span class="category galicia">galicia 🍷</span>
+</div>
+
+<p>Además, ¡contamos con la clásica dinámica de quesitos de Trivial!</p>
+
+<div class="box">
+<span class="category trivial-geografia">🔵 Trivial: Geografía</span>
+<span class="category trivial-arte">🟪 Trivial: Arte y Literatura</span>
+<span class="category trivial-historia">🟨 Trivial: Historia</span>
+<span class="category trivial-entretenimiento">🟥 Trivial: Espectáculos</span>
+<span class="category trivial-ciencias">🟩 Trivial: Ciencias y Naturaleza</span>
+<span class="category trivial-deportes">🟧 Trivial: Deportes</span>
+<span class="category trivial-otras">⚪ Trivial: Otras</span>
+</div>
+
+<p>Cada categoría cuenta con su propia dinámica, formato visual en el overlay y nivel de dificultad adaptado.</p>
+
+---
+
+<h2>🏆 Gamificación y Logros</h2>
+<p>
+Acertar respuestas correctas no solo demuestra tu agilidad mental, sino que indexa datos directamente en tus contadores históricos del canal. Alcanzar los hitos comunitarios te otorgará las prestigiosas <strong>Insignias de la Colección Minijuegos</strong>, escalando tu rango en el ranking coleccionista y coloreando tu vitrina web personal.
+</p>
+
+---
+
+<h2>🔥 Progresión de Desafíos</h2>
+<div class="box">
+⚡ Mente veloz → Acertar sin consumir pistas en pantalla<br>
+👁️ Ojo de halcón → Dominar las trivias visuales e imágenes ocultas<br>
+😈 Temario infernal → Respuestas correctas sobre leyes y oposiciones<br>
+🤪 Fan del caos → Resolver los jeroglíficos basados en emojis<br>
+🕵️ Detective → Descubrir los misterios ocultos en las descripciones de texto<br>
+💬 Social master → Dinámicas y adivinanzas interactivas de la comunidad<br>
+🍷 Espíritu galego → Dominar las preguntas sobre Galicia<br>
+🧠 Rey del Trivial → Conseguir acertar preguntas de todos los colores del tablero
+</div>
+
+<p>Tus estadísticas de aciertos acumulan nivel con el tiempo, permitiéndote desbloquear medallas cada vez más avanzadas y raras.</p>
+
+---
+
+<h2>🍷 Galicia mode</h2>
+<p>
+Minijuegos especiales cargados de retranca, expresiones típicas, geografía, cultura y humor gallego. Prepárate para dominar el arte del clásico e infalible: <span class="highlight">"depende"</span>.
+</p>
+
+---
+
+<h2>📌 Reglas importantes</h2>
+<div class="box">
+• No es obligatorio escribir con una ortografía perfecta, pero la respuesta sí debe ser reconocible por el motor del bot.<br>
+• Puede haber varias alternativas o sinónimos válidos configurados para un mismo acertijo.<br>
+• ¡Algunas respuestas esconden un toque de retranca! 😏<br>
+• El uso de mayúsculas o minúsculas no afecta a tu respuesta.
+</div>
+
+<section>
+  <h2>🔗 Guías relacionadas</h2>
+
+  <div class="links">
+
+    <p>🌳 Bosque virtual:<br>
+      <a href="https://bibiopotoleando.github.io/bosque-visual/guia_bosque.html">
+        https://bibiopotoleando.github.io/bosque-visual/guia_bosque.html
+      </a>
+    </p>
+
+    <p>📝 Tareas:<br>
+      <a href="https://bibiopotoleando.github.io/guia-tareas/guia_tareas.html">
+        https://bibiopotoleando.github.io/guia-tareas/guia_tareas.html
+      </a>
+    </p>
+
+    <p>🎁 Canjeos:<br>
+      <a href="https://bibiopotoleando.github.io/guia-canjeos/guia_canjeos.html">
+        https://bibiopotoleando.github.io/guia-canjeos/guia_canjeos.html
+      </a>
+    </p>
+
+    <p>📌 Estados:<br>
+      <a href="https://bibiopotoleando.github.io/estados-y-bebidas/estados.html">
+        https://bibiopotoleando.github.io/estados-y-bebidas/estados.html
+      </a>
+    </p>
+
+    <p>☕ Bebidas:<br>
+      <a href="https://bibiopotoleando.github.io/estados-y-bebidas/bebidas.html">
+        https://bibiopotoleando.github.io/estados-y-bebidas/bebidas.html
+      </a>
+    </p>
+
+    <p>🎯 Retos:<br>
+      <a href="https://bibiopotoleando.github.io/retos/retos.html">
+        https://bibiopotoleando.github.io/retos/retos.html
+      </a>
+    </p>
+
+    <p>🎮 Minijuego:<br>
+      <a href="https://bibiopotoleando.github.io/minijuego-guia/index.html">
+        https://bibiopotoleando.github.io/minijuego-guia/index.html
+      </a>
+    </p>
+
+    <p>📦 Material:<br>
+      <a href="https://bibiopotoleando.github.io/estados-y-bebidas/material.html">
+        https://bibiopotoleando.github.io/estados-y-bebidas/material.html
+      </a>
+    </p>
+
+    <p>🏅 Insignias:<br>
+      <a href="https://bibiopotoleando.github.io/insignias-visual/guia_insignias.html">
+        https://bibiopotoleando.github.io/insignias-visual/guia_insignias.html
+      </a>
+    </p>
+        
+  </div>
+</section>
+
+</div>
+
+<div class="footer">
+🎮 Diviértete y entrena tu agilidad mental ✨
+</div>
+
+</body>
+</html>
+"""
+
+with open('GITHUB_MINIJUEGOS_FINAL.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("[file-tag: GITHUB_MINIJUEGOS_FINAL.html]")  text-align: center;
   opacity: 0.8;
   margin-bottom: 30px;
 }
